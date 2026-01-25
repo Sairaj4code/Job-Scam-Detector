@@ -45,6 +45,7 @@ export default function Navbar() {
     { to: "/", label: "Home", icon: Home },
     { to: "/predict", label: "Prediction", icon: Search },
     { to: "/report", label: "Report Scam", icon: AlertTriangle },
+    { to: "/chatbot", label: "AI Assistant", icon: MessageCircle },
     { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   ];
 
@@ -102,14 +103,6 @@ export default function Navbar() {
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
 
-            {/* Login Button */}
-            <Link
-              to="/login"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-medium text-sm transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40"
-            >
-              <LogIn className="w-4 h-4" />
-              Login
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}

@@ -4,6 +4,7 @@ import LandingPage from "./components/LandingPage";
 import JobPrediction from "./components/JobPrediction";
 import ReportScam from "./components/ReportScam";
 import Dashboard from "./components/Dashboard";
+import ChatBot from "../ChatBot";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/predict" element={<JobPrediction />} />
           <Route path="/report" element={<ReportScam />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chatbot" element={<ChatBot />} />
         </Routes>
       </div>
     </BrowserRouter>
