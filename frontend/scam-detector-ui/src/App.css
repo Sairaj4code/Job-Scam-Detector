@@ -1,0 +1,121 @@
+/* Layout */
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.header p {
+  color: #475569;
+  margin-top: 0.5rem;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card-elevated {
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Section */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Result Card */
+.result-card {
+  border-left: 6px solid;
+  border-radius: 1rem;
+}
+
+.result-card.danger {
+  border-color: #e11d48;
+  background: #fff1f2;
+}
+
+/* Result Header */
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Icons */
+.icon-safe {
+  color: #16a34a;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-warning {
+  color: #d97706;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-danger {
+  color: #e11d48;
+  width: 40px;
+  height: 40px;
+}
+
+/* Risk bar */
+.risk-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+.risk-fill {
+  height: 100%;
+  background: linear-gradient(to right, #fb7185, #e11d48);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* List */
+.reason-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #334155;
+}
+
+/* Explanation */
+.explanation {
+  background: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Actions */
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
