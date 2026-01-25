@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+env/
+.venv/
+
+# Runtime data
+scam_reports.json
+
+# OS
+.DS_Store
