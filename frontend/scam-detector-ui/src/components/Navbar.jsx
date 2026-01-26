@@ -46,7 +46,7 @@ export default function Navbar() {
     { to: "/predict", label: "Prediction", icon: Search },
     { to: "/report", label: "Report Scam", icon: AlertTriangle },
     { to: "/chatbot", label: "AI Assistant", icon: MessageCircle },
-    { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { to: "/dashboard", label: "Insights", icon: LayoutDashboard },
   ];
 
   const isActive = (path) => location.pathname === path;

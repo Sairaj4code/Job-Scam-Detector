@@ -64,7 +64,7 @@ function HeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up">
-          Detect Job Scams with{" "}
+          Detect Job & Internship Scams with{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-600 to-orange-500 bg-clip-text text-transparent">
             AI-Powered
           </span>{" "}
@@ -85,13 +85,6 @@ function HeroSection() {
           >
             Analyze Job Posting
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            to="/chat"
-            className="flex items-center gap-2 px-8 py-4 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold text-lg border-2 border-gray-200 dark:border-gray-700 hover:border-red-500 dark:hover:border-red-500 transition-all duration-300 hover:scale-105"
-          >
-            <Brain className="w-5 h-5" />
-            Ask AI Assistant
           </Link>
         </div>
 
