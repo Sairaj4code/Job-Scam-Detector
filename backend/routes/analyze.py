@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from backend.ML.ml_service import predict_scam_prob
-from service.rules import rule_score
-from service.scoring import final_score
+from backend.service.rules import rule_score
+from backend.service.scoring import final_score
 
 analyze_bp = Blueprint("analyze", __name__)
 
