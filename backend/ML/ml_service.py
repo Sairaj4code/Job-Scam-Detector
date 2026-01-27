@@ -5,7 +5,15 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "scam_pipeline.pkl")
 
-pipeline = joblib.load(MODEL_PATH)
+
+_pipeline = None  # cache
+
+
+def get_pipeline():
+    global _pipeline
+    if _pipeline is None:
+        _pipeline = joblib.load(MODEL_PATH)
+    return _pipeline
 
 def predict_scam_prob(payload: dict) -> float:
     text = payload["title"] + " " + payload.get("description", "")
