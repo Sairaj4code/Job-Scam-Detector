@@ -16,6 +16,7 @@ def get_pipeline():
     return _pipeline
 
 def predict_scam_prob(payload: dict) -> float:
+    pipeline = get_pipeline()
     text = payload["title"] + " " + payload.get("description", "")
 
     X = pd.DataFrame([{
