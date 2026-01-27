@@ -6,8 +6,6 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight, 
-  Star,
-  Quote,
   Mail,
   Phone,
   MapPin,
@@ -176,90 +174,6 @@ function FeaturesSection() {
   );
 }
 
-// Testimonials Section
-function TestimonialsSection() {
-  const [ref, isVisible] = useScrollReveal();
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Recent Graduate",
-      image: "https://randomuser.me/api/portraits/women/1.jpg",
-      content: "ScamShield saved me from a fake remote job offer that asked for an upfront 'equipment fee'. The AI detected it instantly!",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Software Engineer",
-      image: "https://randomuser.me/api/portraits/men/2.jpg",
-      content: "As someone who reviews dozens of job offers, this tool is invaluable. It caught red flags I would have missed.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Career Counselor",
-      image: "https://randomuser.me/api/portraits/women/3.jpg",
-      content: "I recommend ScamShield to all my clients. It's become an essential part of the modern job search toolkit.",
-      rating: 5
-    },
-    {
-      name: "David Thompson",
-      role: "HR Professional",
-      image: "https://randomuser.me/api/portraits/men/4.jpg",
-      content: "The accuracy is impressive. It even identified subtle manipulation tactics in seemingly legitimate postings.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <section className="py-24 bg-white dark:bg-gray-900" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Trusted by Thousands
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Real stories from people who avoided job scams with our AI-powered detection
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-500 hover:shadow-lg ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <Quote className="w-8 h-8 text-red-500/30 mb-4" />
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">{testimonial.content}</p>
-              
-              <div className="flex items-center gap-3">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white text-sm">{testimonial.name}</div>
-                  <div className="text-gray-500 dark:text-gray-400 text-xs">{testimonial.role}</div>
-                </div>
-              </div>
-              
-              <div className="flex gap-1 mt-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // Contact Section
 function ContactSection() {
   const [ref, isVisible] = useScrollReveal();
@@ -304,7 +218,7 @@ function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">Call Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                  <p className="text-gray-600 dark:text-gray-400">9009119000</p>
                   <p className="text-gray-500 dark:text-gray-500 text-sm">Mon-Fri, 9am-6pm EST</p>
                 </div>
               </div>
@@ -315,8 +229,8 @@ function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">Visit Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400">123 Security Lane</p>
-                  <p className="text-gray-500 dark:text-gray-500 text-sm">San Francisco, CA 94102</p>
+                  <p className="text-gray-600 dark:text-gray-400">MGMCET College of engineering</p>
+                  <p className="text-gray-500 dark:text-gray-500 text-sm">Kamothe, Navi Mumbai</p>
                 </div>
               </div>
             </div>
@@ -334,7 +248,7 @@ function ContactSection() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
-                  placeholder="John Doe"
+                  placeholder="Sairaj Khot"
                   required
                 />
               </div>
@@ -348,7 +262,8 @@ function ContactSection() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
-                  placeholder="john@example.com"
+                  placeholder="sairajkhot@gmail.com"
+
                   required
                 />
               </div>
