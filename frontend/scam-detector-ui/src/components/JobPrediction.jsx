@@ -17,6 +17,7 @@ import {
   FileText,
   HelpCircle
 } from "lucide-react";
+import { analyzeJob } from "../services/api";
 
 export default function JobPrediction() {
   const [formData, setFormData] = useState({
@@ -49,24 +50,16 @@ const handlePrediction = async () => {
   setResult(null);
 
   try {
-    const response = await fetch("http://localhost:5000/analyze", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        title: formData.jobTitle,
-        description: formData.description,
-        telecommuting: formData.telecommuting === "yes" ? 1 : 0,
-        has_company_logo: formData.hasCompanyLogo === "yes" ? 1 : 0,
-        has_questions: formData.hasQuestions === "yes" ? 1 : 0,
-        salary_missing: formData.salaryMissing === "yes" ? 1 : 0,
-        education_missing: formData.educationMissing === "yes" ? 1 : 0,
-        experience_missing: formData.experienceMissing === "yes" ? 1 : 0
-      })
+    const data = await analyzeJob({
+      title: formData.jobTitle,
+      description: formData.description,
+      telecommuting: formData.telecommuting === "yes" ? 1 : 0,
+      has_company_logo: formData.hasCompanyLogo === "yes" ? 1 : 0,
+      has_questions: formData.hasQuestions === "yes" ? 1 : 0,
+      salary_missing: formData.salaryMissing === "yes" ? 1 : 0,
+      education_missing: formData.educationMissing === "yes" ? 1 : 0,
+      experience_missing: formData.experienceMissing === "yes" ? 1 : 0
     });
-
-    const data = await response.json();
 
     setResult({
       verdict: data.verdict,

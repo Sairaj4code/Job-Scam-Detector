@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AlertTriangle, Send, CheckCircle, Building, Mail, FileText } from "lucide-react";
+import { reportScam } from "../services/api";
 
 export default function ReportScam() {
   const [formData, setFormData] = useState({
@@ -15,17 +16,7 @@ export default function ReportScam() {
       e.preventDefault();
 
       try {
-        const res = await fetch("http://localhost:5000/report", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(formData)
-        });
-
-        if (!res.ok) {
-          throw new Error("Backend rejected report");
-        }
+        await reportScam(formData);
 
         setSubmitted(true);
 

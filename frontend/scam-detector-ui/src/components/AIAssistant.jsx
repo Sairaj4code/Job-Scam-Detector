@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { chatWithAI } from "../services/api";
 
 export default function AIAssistant({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
@@ -31,13 +32,7 @@ export default function AIAssistant({ isOpen, onClose }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/ai/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
-
-      const data = await response.json();
+      const data = await chatWithAI(userMessage);
       
       setMessages(prev => [...prev, { 
         role: "bot", 
