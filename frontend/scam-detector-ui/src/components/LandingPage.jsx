@@ -333,7 +333,6 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <HeroSection />
       <FeaturesSection />
-      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </div>
