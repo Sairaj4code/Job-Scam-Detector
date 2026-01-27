@@ -1,5 +1,5 @@
 from flask import Flask
-from backend.routes.analyze import analyze_bp
+from routes.analyze import analyze_bp
 from flask_cors import CORS 
 from routes.report import report_bp
 from routes.chat import chat_bp
